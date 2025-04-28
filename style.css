@@ -169,3 +169,126 @@ main {
 .hidden {
   display: none;
 }
+
+.open--modal {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  color: #444;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+
+  padding: 0.7rem 2.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  text-align: left;
+  font-size: large;
+
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.message h1 {
+  text-align: center;
+}
+
+.exit--modal {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #ffffff;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+
+  padding: 0.7rem 1.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
+
+.popup {
+  position: absolute;
+  bottom: 6.5%;
+  right: 2%;
+  width: 10%;
+  height: 6.5%;
+  text-align: left;
+  font-size: large;
+  color: #fff;
+
+  background-color: rgba(0, 0, 0, 0.391);
+  backdrop-filter: blur(3px);
+
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  transition: width 2s, height 2s, font-size 2s;
+}
+
+.popup:hover {
+  width: 13%;
+  height: 9%;
+  font-size: xx-large;
+}
+
+.exit--popup {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: #ffffff;
+  background: none;
+  border: none;
+  font-family: inherit;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 400;
+  transition: all 0.2s;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+
+  padding: 0.7rem 1.5rem;
+  border-radius: 50rem;
+  box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
+}
