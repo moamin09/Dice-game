@@ -57,6 +57,7 @@ const startGame = function () {
   scores = [0, 0];
   player0EL.classList.remove(`player--winner`);
   player1EL.classList.remove(`player--winner`);
+  player0EL.classList.add(`player--active`);
   hideDice();
 };
 
