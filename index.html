@@ -31,6 +31,52 @@
       <button class="btn btn--roll">🎲 Roll dice</button>
       <button class="btn btn--hold">📥 Hold</button>
     </main>
+
+    <button class="open--modal">?</button>
+
+    <modal id="help">
+      <overlay class="overlay hidden"></overlay>
+      <message class="message hidden">
+        <button class="exit--modal">X</button>
+        <h1>🎲 Dice Game</h1>
+        <h2>Description:</h2>
+        <p>
+          The Dice Game is a two-player game where players take turns rolling a
+          six-sided dice. The goal is to accumulate 100 points before your
+          opponent does. Here's how it works:
+        </p>
+        <h2>Gameplay:</h2>
+        <p>
+          Rolling the Dice: On each turn, the active player rolls the dice. If
+          the roll is anything other than 1, the player can add the rolled
+          number to their current score. The player can continue rolling to
+          accumulate more points on their turn, but if they roll a 1, they lose
+          all points accumulated during that turn. Holding the Score: If a
+          player decides to "hold" (click the Hold button), the points
+          accumulated during their turn are added to their total score. Then,
+          control switches to the next player. Winning the Game: The first
+          player to reach 100 points wins the game. When a player wins, the game
+          announces the winner and the "New Game" button becomes active to reset
+          everything.
+        </p>
+        <h2>Game features:</h2>
+        <p>•Two players: Each player alternates turns.</p>
+        <p>
+          •Dynamic dice rolls: Visual representation of the dice roll with
+          images.
+        </p>
+        <p>
+          •Responsive UI: The game adjusts to the player's actions in real-time.
+        </p>
+      </message>
+    </modal>
+    <modal id="start">
+      <popup class="popup">
+        <button class="exit--popup">X</button>
+        <p>Help</p>
+      </popup>
+    </modal>
+
     <script src="script.js"></script>
   </body>
 </html>
