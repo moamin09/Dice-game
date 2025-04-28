@@ -22,6 +22,7 @@ let scores;
 const btnNew = document.querySelector(`.btn--new`);
 const btnRoll = document.querySelector(`.btn--roll`);
 const btnHold = document.querySelector(`.btn--hold`);
+const btnHelp = document.querySelector(`.open--modal`);
 
 // playing
 let playing;
@@ -59,6 +60,20 @@ const startGame = function () {
   hideDice();
 };
 
+// show modal
+const showModal = function () {
+  document.querySelector(`.overlay`).classList.remove(`hidden`);
+  document.querySelector(`.message`).classList.remove(`hidden`);
+};
+// hide modal
+const hideModal = function () {
+  document.querySelector(`.overlay`).classList.add(`hidden`);
+  document.querySelector(`.message`).classList.add(`hidden`);
+};
+// hide popup
+const hidePopup = function () {
+  document.querySelector(`.popup`).classList.add(`hidden`);
+};
 //--------------------------------------------------------------------------
 
 // start game
@@ -136,5 +151,24 @@ btnHold.addEventListener(`click`, function () {
 
 // new (or reset) game button
 btnNew.addEventListener(`click`, startGame);
+
+// Help button
+btnHelp.addEventListener(`click`, showModal);
+
+// exit modal
+document.querySelector(`.overlay`).addEventListener(`click`, hideModal);
+document.querySelector(`.exit--modal`).addEventListener(`click`, hideModal);
+addEventListener(`keydown`, function (e) {
+  if (e.key === `Escape`) {
+    if (!document.querySelector(`.message`).classList.contains(`hidden`))
+      hideModal();
+  }
+});
+
+// exit popup
+document.querySelector(`.exit--popup`).addEventListener(`click`, function () {
+  if (!document.querySelector(`.popup`).classList.contains(`hidden`))
+    hidePopup();
+});
 
 //--------------------------------------------------------------------------
